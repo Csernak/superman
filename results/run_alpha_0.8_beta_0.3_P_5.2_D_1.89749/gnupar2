@@ -1,0 +1,6 @@
+#P = 5.2, D = 1.89749, alpha = 0.8, beta = 0.3
+plot 'analysis.dat';
+set term post
+ set output 'perpontok.ps'
+ replot 
+pause -1 'Press ENTER to return...';

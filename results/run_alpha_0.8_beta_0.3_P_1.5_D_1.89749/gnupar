@@ -1,0 +1,6 @@
+#P = 1.5, D = 1.89749, alpha = 0.8, beta = 0.3
+plot [-1.02231:1.02231][-0.922525:0.922525] 'szimul.dat', 'cycles1.out', 'cycles2.out', 'cycles3.out', 'cycles4.out', 'cycles5.out', 'cycles6.out', 'cycles7.out', 'cycles8.out', -4.74311-0.790518*x title '', -4.2161-0.790518*x title '', -3.68908-0.790518*x title '', -3.16207-0.790518*x title '', -2.63506-0.790518*x title '', -2.10805-0.790518*x title '', -1.58104-0.790518*x title '', -1.05402-0.790518*x title '', -0.527012-0.790518*x title '', 0.527012-0.790518*x title '', 1.05402-0.790518*x title '', 1.58104-0.790518*x title '', 2.10805-0.790518*x title '', 2.63506-0.790518*x title '', 3.16207-0.790518*x title '', 3.68908-0.790518*x title '', 4.2161-0.790518*x title '', 4.74311-0.790518*x title '';
+set term post
+ set output 'perpontok.ps'
+ replot 
+pause -1 'Press ENTER to return...';
