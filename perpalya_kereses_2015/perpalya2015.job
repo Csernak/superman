@@ -1,0 +1,36 @@
+#**************************************************************
+# perpalya2015.job
+# 
+# Parameter scan
+# vanilla universe
+#
+# Forditas
+#  make clean
+#  make perpalya2015
+#
+# Futtatas (pelda)
+#  ./perpalya2015 -l 4 -n 3 -P 1 -D 1.89 -a 0.8 -b 0.3
+#
+# Job inditasa
+#  condor_submit perpalya2015.job
+#
+#**************************************************************
+
+# vanilla univerzum kijelolese
+universe = vanilla
+executable = perpalya2015
+
+# standard output
+output = perpalya_$(Process).out
+# standard error
+error = perpalya_$(Process).err
+# condor log
+log = perpalya2015.log
+
+# P varialasa 0.7-tol 5.5-ig 0.1-es lepessel 49 darab szal kell
+arguments = "-l 8 -n 13 -P $(Process) -D 1.89749 -a 0.8 -b 0.3"
+
+# Kovetelmeny: teljes gepet igenylunk es ne a fejgepen fusson
+requirements = ( machine =!= HEAD_NODE )
+# Utemezes
+queue 49
