@@ -1,0 +1,10 @@
+@ECHO OFF
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+FOR /D %%G in (*) DO (
+	CD %%G
+	CALL gnuplot gnupar
+	CD ..
+)
+PAUSE
+

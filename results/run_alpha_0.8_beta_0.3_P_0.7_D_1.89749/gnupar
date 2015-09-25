@@ -1,6 +1,7 @@
 #P = 0.7, D = 1.89749, alpha = 0.8, beta = 0.3
 plot [-10.0477:10.0477][-1.335:1.335] 'szimul.dat', 'cycles1.out', 'cycles2.out', 'cycles3.out', 'cycles4.out', 'cycles5.out', 'cycles6.out', 'cycles7.out', 'cycles8.out', -7.37817-0.368908*x title '', -6.85116-0.368908*x title '', -6.32414-0.368908*x title '', -5.79713-0.368908*x title '', -5.27012-0.368908*x title '', -4.74311-0.368908*x title '', -4.2161-0.368908*x title '', -3.68908-0.368908*x title '', -3.16207-0.368908*x title '', -2.63506-0.368908*x title '', -2.10805-0.368908*x title '', -1.58104-0.368908*x title '', -1.05402-0.368908*x title '', -0.527012-0.368908*x title '', 0.527012-0.368908*x title '', 1.05402-0.368908*x title '', 1.58104-0.368908*x title '', 2.10805-0.368908*x title '', 2.63506-0.368908*x title '', 3.16207-0.368908*x title '', 3.68908-0.368908*x title '', 4.2161-0.368908*x title '', 4.74311-0.368908*x title '', 5.27012-0.368908*x title '', 5.79713-0.368908*x title '', 6.32414-0.368908*x title '', 6.85116-0.368908*x title '', 7.37817-0.368908*x title '';
 set term post
+ set terminal postscript color
  set output 'perpontok.ps'
  replot 
 pause -1 'Press ENTER to return...';
