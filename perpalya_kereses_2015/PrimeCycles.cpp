@@ -316,7 +316,7 @@ int main(int argc, char *argv[]) {
 
 		//******* GNUPLOT HIVASA ************
 		gnufile << ";\n"; //Abrazolo sor vege
-		gnufile << "set term post\n set output 'perpontok.ps'\n replot \n";
+		gnufile << "set term post\n set terminal postscript color\n set output 'perpontok.ps'\n replot \n";
 		gnufile << "pause -1 'Press ENTER to return...';\n";
 		gnufile.close();
 		char run[36] = ("gnuplot gnupar \0");
@@ -324,7 +324,7 @@ int main(int argc, char *argv[]) {
 		if(anal){
 			gnufile2 << "plot 'analysis.dat'";
 			gnufile2 << ";\n"; //Abrazolo sor vege
-			gnufile2 << "set term post\n set output 'perpontok.ps'\n replot \n";
+			gnufile2 << "set term post\n set terminal postscript color\n set output 'perpontok.ps'\n replot \n";
 			gnufile2 << "pause -1 'Press ENTER to return...';\n";
 			char run2[36] = ("gnuplot gnupar2\0");
 			if(PLOT){cout << system(run2); }
